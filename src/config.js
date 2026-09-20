@@ -26,7 +26,7 @@ export const venue = {
 // Siden lenker til et Google-skjema i stedet for å bygge det inn.
 // IDen er delen av skjemaets URL mellom `/d/e/` og `/viewform`:
 // åpne skjemaet → Send → fanen `< >`.
-const FORM_ID = '1FAIpQLSfVEK1IYehIc0w_YYGv1gDRxS78U_AbbL57ifmhEHGpMT2A7w' // ⚠️
+const FORM_ID = '1FAIpQLScBxoeNda8gQi5kboahCE89n-6BuXAHwzKr940kw31l_QRv1Q'
 
 export const rsvp = {
   openUrl: `https://docs.google.com/forms/d/e/${FORM_ID}/viewform`,

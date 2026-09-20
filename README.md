@@ -50,9 +50,22 @@ Siden har to seksjoner, begge et `<Panel>` (et boardingkort): **Hvor & når** og
 til `main`. Første gang må **Settings → Pages → Source** stå på **GitHub
 Actions**.
 
-Siden serveres fra en underkatalog, så `base` i `vite.config.js` må stemme med
-repo-navnet. Endrer du navnet, må `base` og `og:image` / `og:url` / `canonical`
-i `index.html` oppdateres.
+Siden serveres fra <https://skagesogsusans2027.com>. Domenet settes av
+[`public/CNAME`](public/CNAME), som Vite kopierer til `dist/`. Derfor er `base`
+i `vite.config.js` `'/'`. Bytter du domene, må `public/CNAME` og `og:image` /
+`og:url` / `canonical` i `index.html` oppdateres samtidig.
+
+DNS hos registraren må peke apex til GitHub Pages:
+
+```
+A     @   185.199.108.153
+A     @   185.199.109.153
+A     @   185.199.110.153
+A     @   185.199.111.153
+CNAME www t3lluz.github.io.
+```
+
+Når DNS har propagert, huk av **Enforce HTTPS** under Settings → Pages.
 
 ---
 
