@@ -1,10 +1,10 @@
 # Susan & Skage
 
-React 19 + Vite 8, statisk bygg, publisert på GitHub Pages.
+React 19 + Vite 8, statisk build, publisert på GitHub Pages.
 
 <p align="center">
-  <img src=".github/media/desktop.png" height="340" alt="Toppen av siden på desktop" />
-  <img src=".github/media/mobile.png" height="340" alt="Toppen av siden på mobil" />
+  <img src=".github/media/desktop.jpg" height="340" alt="Toppen av siden på desktop" />
+  <img src=".github/media/mobile.jpg" height="340" alt="Toppen av siden på mobil" />
 </p>
 
 ## Kom i gang
@@ -16,18 +16,6 @@ npm run dev
 
 Siden kjører på <http://localhost:5173>.
 
-| Kommando          | Hva den gjør                    |
-| ----------------- | ------------------------------- |
-| `npm run dev`     | Utviklingsserver med hot reload |
-| `npm run build`   | Statisk bygg til `dist/`        |
-| `npm run preview` | Serverer `dist/` lokalt         |
-| `npm run lint`    | Oxlint                          |
-
-## Innhold
-
-Alt av tekst, datoer, adresser og lenker ligger i
-[`src/config.js`](src/config.js). Ingen streng er hardkodet i en komponent.
-Feltene merket ⚠️ må erstattes før siden deles.
 
 ## Struktur
 
@@ -41,8 +29,6 @@ src/
   styles/        base, sky, hero, sections
 ```
 
-Siden har to seksjoner, begge et `<Panel>` (et boardingkort): **Hvor & når** og
-**Svar**. Hver fil forklarer sine egne valg i toppen.
 
 ## Publisering
 
@@ -50,12 +36,12 @@ Siden har to seksjoner, begge et `<Panel>` (et boardingkort): **Hvor & når** og
 til `main`. Første gang må **Settings → Pages → Source** stå på **GitHub
 Actions**.
 
-Siden serveres fra <https://skagesogsusans2027.com>. Domenet settes av
-[`public/CNAME`](public/CNAME), som Vite kopierer til `dist/`. Derfor er `base`
-i `vite.config.js` `'/'`. Bytter du domene, må `public/CNAME` og `og:image` /
-`og:url` / `canonical` i `index.html` oppdateres samtidig.
+Siden bor på <https://skagesogsusans2027.com>. Domenet settes av
+[`public/CNAME`](public/CNAME), som Vite kopierer til `dist/`, og derfor er
+`base` i `vite.config.js` `'/'`. Bytter du domene, må `public/CNAME` og
+`canonical` / `og:url` / `og:image` i `index.html` følge med.
 
-DNS hos registraren må peke apex til GitHub Pages:
+DNS hos registraren må peke på GitHub Pages:
 
 ```
 A     @   185.199.108.153
@@ -69,4 +55,5 @@ Når DNS har propagert, huk av **Enforce HTTPS** under Settings → Pages.
 
 ---
 
-Flyet, himmelen og fargene er en hyllest til _Porco Rosso_ © 1992 Studio Ghibli.
+Flyet og fargene er en hyllest til Porco Rosso (Studio Ghibli,
+1992).
